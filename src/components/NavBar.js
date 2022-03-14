@@ -1,24 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BsSearch } from 'react-icons/bs';
-import {Badge} from '@material-ui/core';
+import { Badge } from '@material-ui/core';
 import { ShoppingCartOutlined } from '@mui/icons-material';
 
 const Container = styled.div`
-    height: 60px;
+    min-height: 60px;
+    align-items: center;
 `;
 
 const Wrapper = styled.div`
-    padding: 10px 20px;
+    padding: 0 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    min-height: inherit;
 `;
 
 const Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
+    min-height: inherit;
 `;
 
 const Language = styled.span`
@@ -27,7 +30,7 @@ const Language = styled.span`
 `;
 
 const SearchContainer = styled.div`
-    border: 0.5px solid black;
+    border: 0.5px solid #cecccc;
     display: flex;
     align-items: center;
     margin-left: 25px;
@@ -49,12 +52,16 @@ const Logo = styled.h1`
 
 const Right = styled.div`
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 `;
 
 const MenuItem = styled.div`
-font-size: 14px;
-cursor: pointer;
-`
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+`;
 
 const NavBar = () => {
     return (
@@ -64,7 +71,7 @@ const NavBar = () => {
                     <Language>EN</Language>
                     <SearchContainer>
                         <Input />
-                        <BsSearch />
+                        <BsSearch style={{ color: 'gray', fontSize: 16 }} />
                     </SearchContainer>
                 </Left>
                 <Center>
@@ -75,7 +82,7 @@ const NavBar = () => {
                     <MenuItem>SIGN IN</MenuItem>
                     <MenuItem>
                         <Badge color="secondary" badgeContent={5}>
-                     <ShoppingCartOutlined />
+                            <ShoppingCartOutlined />
                         </Badge>
                     </MenuItem>
                 </Right>
