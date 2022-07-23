@@ -6,7 +6,6 @@ import {
     ArrowForwardIosOutlined
 } from '@mui/icons-material';
 
-
 export default function Slider () {
     
     const [slideIndex, setSlideIndex] = useState(0);

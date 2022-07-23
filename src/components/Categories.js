@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { categories } from '../db/data';
-import { CategoryItem } from './CategoryItem';
-
+import CategoryItem from './CategoryItem';
 
 const Categories = () => {
     return (
@@ -14,6 +13,10 @@ const Categories = () => {
     );
 };
 
+export default Categories;
+
+// ======  STYLES  ======
+
 const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -23,4 +26,3 @@ const Container = styled.div`
     background-color: #f5fafd;
 `;
 
-export default Categories;

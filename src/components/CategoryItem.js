@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const CategoryItem = ( {item} ) => {
+const CategoryItem = ( {item} ) => {
 
     return (
         <Container bg={item.bg}>
@@ -13,6 +13,10 @@ export const CategoryItem = ( {item} ) => {
         </Container>
     );
 }
+
+export default CategoryItem;
+
+// ======  STYLES  ======
 
 const Container = styled.div`
     flex: 1;
@@ -60,3 +64,4 @@ const Button = styled.button`
     font-weight: 600;
     padding: 10px;
 `;
+

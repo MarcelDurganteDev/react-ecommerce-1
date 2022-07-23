@@ -4,6 +4,38 @@ import { BsSearch } from 'react-icons/bs';
 import { Badge } from '@material-ui/core';
 import { ShoppingCartOutlined } from '@mui/icons-material';
 
+const NavBar = () => {
+    return (
+        <Container>
+            <Wrapper>
+                <Left>
+                    <Language>EN</Language>
+                    <SearchContainer>
+                        <Input />
+                        <BsSearch style={{ color: 'gray', fontSize: 16 }} />
+                    </SearchContainer>
+                </Left>
+                <Center>
+                    <Logo>MARCEL . DEV</Logo>
+                </Center>
+                <Right>
+                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>SIGN IN</MenuItem>
+                    <MenuItem>
+                        <Badge color="secondary" badgeContent={5}>
+                            <ShoppingCartOutlined />
+                        </Badge>
+                    </MenuItem>
+                </Right>
+            </Wrapper>
+        </Container>
+    );
+};
+
+export default NavBar;
+
+// ======  STYLES  ======
+
 const Container = styled.div`
     min-height: 60px;
     align-items: center;
@@ -63,32 +95,3 @@ const MenuItem = styled.div`
     margin-left: 25px;
 `;
 
-const NavBar = () => {
-    return (
-        <Container>
-            <Wrapper>
-                <Left>
-                    <Language>EN</Language>
-                    <SearchContainer>
-                        <Input />
-                        <BsSearch style={{ color: 'gray', fontSize: 16 }} />
-                    </SearchContainer>
-                </Left>
-                <Center>
-                    <Logo>MARCEL . DEV</Logo>
-                </Center>
-                <Right>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>SIGN IN</MenuItem>
-                    <MenuItem>
-                        <Badge color="secondary" badgeContent={5}>
-                            <ShoppingCartOutlined />
-                        </Badge>
-                    </MenuItem>
-                </Right>
-            </Wrapper>
-        </Container>
-    );
-};
-
-export default NavBar;

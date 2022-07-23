@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Product } from './Product';
+import Product from './Product';
 import { marvelItems } from '../db/data'
 
-export const Products = () => {
+const Products = () => {
   return (
       <Container>
           {marvelItems.map(item => (
@@ -12,6 +12,10 @@ export const Products = () => {
       </Container>
   );
 }
+
+export default Products;
+
+// ======  STYLES  ======
 
 const Container = styled.div`
     width: 100%;
@@ -24,3 +28,4 @@ const Container = styled.div`
     overflow: hidden;
     background-color: #ffffff;
 `;
+

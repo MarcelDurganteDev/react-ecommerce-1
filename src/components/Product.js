@@ -6,7 +6,7 @@ import {
     SearchOutlined
 } from '@mui/icons-material';
 
-export const Product = ({ product }) => {
+const Product = ({ product }) => {
     return (
         <Container>
             <Image src={product.img} />
@@ -26,6 +26,8 @@ export const Product = ({ product }) => {
         </Container>
     );
 };
+
+// ======  STYLES  ======
 
 const InfoContainer = styled.div`
     opacity: 0;
@@ -70,12 +72,20 @@ const Title = styled.h1`
 `;
 
 const Icons = styled.div`
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+        transition: all 0.5s ease;
+        box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+    }
 `;
+
+export default Product;
